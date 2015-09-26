@@ -1,0 +1,5 @@
+name: BungeeBridgeMessages
+main: net.zyuiop.bungeebridgemessages.BungeeBridgeMessagesPlugin
+author: zyuiop
+version: 1.0
+depends: [BungeeBridge]
