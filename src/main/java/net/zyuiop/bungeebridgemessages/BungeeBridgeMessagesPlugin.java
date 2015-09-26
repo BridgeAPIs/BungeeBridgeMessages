@@ -20,9 +20,10 @@ import net.zyuiop.bungeebridgemessages.commands.CommandReply;
  */
 public class BungeeBridgeMessagesPlugin extends Plugin {
     private final PrivateMessagesManager manager = new PrivateMessagesManager(this);
-    private final BungeeBridge bridge = BungeeBridge.getInstance();
+    private BungeeBridge bridge;
 
     public void onEnable() {
+        bridge = BungeeBridge.getInstance();
         bridge.getConnector().subscribe("privatemessages", new PrivateMessagesHandler(manager));
 
         getProxy().getPluginManager().registerCommand(this, new CommandMsg(this));
